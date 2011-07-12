@@ -1,0 +1,41 @@
+Review: Todo for iPhone.
+
+*This is part of a multi-part series on productivity applications for iOS*
+
+Well, if you've even considered being "productive", you've probably heard of the amazing "GTD" method, or "Getting things Done"[1], and if you're a software (particuarly agile) developer, you've probably heard of the Pomodoro Technique[2]. Well, if you've got an iPhone (Which might just be your biggest distraction!), there are plenty of applications on how "Get things done". Today, I'm going to review my personal favorite, Todo. 
+
+Todo is (On the surface at least) a very ugly application. However, once you dig beneath the ugly outside, there is a wealth of power inside. And that wealth of power is what makes this my personal favorite. (Oops! I just revealed my favorite application before I got the chance to review anything else!!)
+
+
+Where to begin with such a complex app? Well, that's the trick. It's extrememly complex, and that's part of what makes it a staple on my Dock[3]. 
+
+Something that makes it part of my dock is the notifications. You can set it up so that it'll notify you with a push notification hen you need to do something.
+
+So in this example, I set a todo task to "make" me write this article. 
+
+
+
+*I stick everything in Todo*
+
+You can schedule repeating tasks. For example, I have one task that I have repeating every two days - that is, the task to update my computer to make sure I'm running the latest software. And I also have it set so that I'm reminded at 6:30 AM - because that's about when I wake up, and before I get into a grooze that'd be messed up by running the update process. 
+
+For organizing them, you have a few options. 
+
+There is a pretty decent search feature in there, however, I like to stick stuff in Lists/categories. Something that I've done is also put things into "context" - so I can put certain tasks (Like my updating task) into the "Computer upkeep" context, or my "Write todo review" task in the "Oaggle" or "Writing" context. (For those that want to know, it was in the "Oaggle" context). 
+
+
+Syncing with the Cloud.
+
+Here is where I like todo a lot. You have three options for Cloud Syncing (Note that you don't have to sync with the cloud at all - I switch between my iPod and my netbook a lot, so I need a web view. 
+
+For Cloud Sync, you've got a choice between Todo online (to the tune of $19.99USD/year), Toodled (Free, Pro ($14.95USD/year) and Pro Plus ($29.95USD/year) and Appigo Sync (Windows and Mac only). I personally use Toodled free for my Sync service. I don't think it's worth it to buy a account with Todo online for me at this point. However, that might change in the future.
+
+
+Wrap up:
+
+I'd give Todo for iPhone a 4/5 stars. Only thing keeping it from a full five stars is the interface. It's pretty spartan. If they'd only make it pretty (Like Wunderlist!) then I'd give them a perfect rating. 
+
+
+[1] http://en.wikipedia.org/wiki/Getting_Things_Done
+[2] http://en.wikipedia.org/wiki/Pomodoro_Technique
+[3] http://img.ly/3Cst

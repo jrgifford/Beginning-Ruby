@@ -1,0 +1,31 @@
+Wunderlist, A Nice, Pretty Shiny Todo Application [REVIEW]
+
+<em> This is a part of a multi-part series on productivity applications for iOS</em>
+
+As you might have seen last week, we had a review of <em>Todo</em> for iOS.
+
+This week, I'll be rewiewing Wunderlist, another iOS Application for Getting Things Done. 
+
+Wunderlist is a neat, free, lightweight Application that is worth at least a look at. 
+
+You create an account in the app for Wunderlist.com, their syncing service. Sync is fast, free and reliable. 
+
+It's lacking in features, but what it's lacking in features (namely, repeating tasks), it makes up in looks. 
+
+Wunderlist has a amazing interface that is very streamlined and simple, which is precisely what you want in a productivity application.
+
+The app gives you a choice between several different backgrounds, and each to-do list is in black and white, which is nice.
+
+Each tab shows the number of tasks to do in a little number. 
+You can setup Wunderlist to remind you to do that task at a certain time, and that's nice.
+
+Another neat thing about Wunderlist is that you get an email address that you can email a task, and then it'll add it to Wunderlist sync.
+Here's a few screenshots to take a look at.
+
+<insert images from appstore here>
+
+In all, if you're looking for a free todo list, Wunderlist is worth a look.
+
+Wunderlist: Free on the AppStore.
+
+

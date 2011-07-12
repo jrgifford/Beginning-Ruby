@@ -1,0 +1,29 @@
+Evernote, The Mother Of All Note Taking Apps
+
+Title says it all.
+
+Ever wanted a full blown [Content Mangement System](http://en.wikipedia.org/wiki/Content_management_system) on your iPhone (or iPod touch)?
+
+Evernote gives it to you. 
+
+<--more-->
+
+Here's where evernote really shines:
+
+You're out for a walk around town, and you see a new restruant that's opening next week, and they have a deal where if you're one of the first 200 customers, you get 20% off. 
+
+You take out your iPhone, open Evernote, tap the "+" icon that means "New note", tap the "location" button, tap the "camera" button, snap a picture of the restruant, hit save, and <em>BOOM!</em> you're done!
+
+So, when you get home, you can open up Evernote.com, select your new note, and then you'll have your geo-tagged note, complete with a photo of the offer.
+
+You can also record voice memos as well.
+
+If you're looking for the Swiss Army Knife of note applications for iPhone, you're depriving yourself if you don't give Evernote a go.
+
+Minor (for most people, major for me): When you sync, the notes aren't saved for offline reading. Which means that for me and my workflow, Evernote isn't an option.
+
+However, your usage may vary.
+
+<insert Evernote for iPhone screenshots from the AppStore here>
+
+Evernote on the AppStore: Free [[AppStore](http://itunes.apple.com/us/app/evernote/id281796108?mt=8)]

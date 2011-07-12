@@ -1,0 +1,41 @@
+Editorial: Skype, MicroSkype and SkypeSoft.
+
+
+Well, isn't this dandy. Today, it was announced that Microsoft bought Skype to the tune of $8.5 Billion USD. That's a lot.
+
+And to be honest, Microsoft can have Skype. Here's why though.
+
+Skype is bad. Unless you're on Windows.
+
+The Mac and Linux clients are rather. . . lets just say lacking in some areas.
+However, if you're on Windows (Which the majority of our readers are), then Skype is great. However, Skypes current plan is this:
+
+If you want to do video calling with one person, that's OK. More than one? It's going to cost you. **However**, I digress. 
+
+Skype just isn't worth it anymore. They've got issues with their mobile clients[1], [2], and they've got issues with their desktop clients.[3]
+
+But then there's this big thing that is normally used to describe Android.
+
+It's called "Fragmentation". 
+
+And when I say "Fragmentation", I mean "Fragmentation". 
+
+Here's what I mean by that. 
+
+Skype for Windows version: 5.3
+
+Skype for Linux: 2.2 *Beta*
+
+Skype for Mac: 5.1
+
+See the problem here? *There is no common version*. And that's a big problem. 
+
+So, what's the future of Skype now that it's part of the Behemoth in Redmond, WA? I don't know.
+But I do know this: It isn't going to be pretty. 
+
+And not to be the doom and gloom guy, but honestly, I see nothing but bad news down the MicroSkype™ trail. 
+
+
+[1] https://twitter.com/#!/AlexTrott_/status/68015617676021760
+[2] https://twitter.com/#!/Bbal4/status/68015730842542080
+[3] http://blogs.skype.com/garage/2011/05/2nd_hotfix_for_skype_51_for_ma_release_notes.html
