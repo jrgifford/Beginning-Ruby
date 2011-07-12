@@ -10,6 +10,9 @@ class Cat < Pet
 end
 
 class Dog < Pet
+  def bark
+    puts "Woof!"
+  end
 end
 
 class Snake < Pet
