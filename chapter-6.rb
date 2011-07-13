@@ -31,5 +31,3 @@ class Triangle < Shape
   def perimeter
     @side1 + @side2 + @side3
   end
-end
-
