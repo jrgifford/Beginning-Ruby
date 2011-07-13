@@ -22,7 +22,7 @@ class Triangle < Shape
     @side1 = side1
     @side2 = side2
     @side3 = side3
-    end
+  end
 
   def area
     @base_width * @height / 2
