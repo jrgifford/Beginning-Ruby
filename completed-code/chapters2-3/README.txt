@@ -1,0 +1,1 @@
+Chapters 2 and 3 are full of instructional snippets that have been tested but are best served within the book. Running these examples without typing them in would be deterimental to the experimentation process.

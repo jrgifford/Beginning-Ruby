@@ -1,0 +1,482 @@
+  [4;36;1mSQL (0.135850)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.032074)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.009377)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddEntriesTable (1)
+  [4;36;1mSQL (0.367720)[0m   [0;1mCREATE TABLE entries (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `content` text, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.030847)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.016718)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.030008)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.000507)[0m   [0mSHOW KEYS FROM entries[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000106)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddUpdatedAtColumnToEntries (2)
+  [4;36;1mSQL (0.237769)[0m   [0;1mALTER TABLE entries ADD `updated_at` datetime[0m
+  [4;35;1mSQL (0.000250)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000308)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001598)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.000444)[0m   [0mSHOW KEYS FROM entries[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000177)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddUpdatedAtColumnToEntries (2)
+  [4;35;1mSQL (0.053224)[0m   [0mALTER TABLE entries DROP `updated_at`[0m
+  [4;36;1mSQL (0.000258)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+Reached target version: 1
+  [4;35;1mSQL (0.000168)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000312)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001593)[0m   [0mSHOW FIELDS FROM entries[0m
+  [4;36;1mSQL (0.001023)[0m   [0;1mSHOW KEYS FROM entries[0m
+  [4;36;1mEntry Columns (0.001703)[0m   [0;1mSHOW FIELDS FROM entries[0m
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2006-12-19 19:47:12) [GET]
+  Session ID: 75cdad5beb43c07111569a17034c0791
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;36;1mEntry Columns (0.002480)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.022161)[0m   [0mSELECT count(*) AS count_all FROM entries [0m
+  [4;36;1mEntry Load (0.000210)[0m   [0;1mSELECT * FROM entries LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/entries
+Rendering entries/list
+Completed in 0.18757 (5 reqs/sec) | Rendering: 0.00272 (1%) | DB: 0.02485 (13%) | 200 OK [http://0.0.0.0/entries/]
+
+
+Processing EntriesController#new (for 127.0.0.1 at 2006-12-19 19:52:08) [GET]
+  Session ID: 75cdad5beb43c07111569a17034c0791
+  Parameters: {"action"=>"new", "controller"=>"entries"}
+  [4;35;1mEntry Columns (0.001652)[0m   [0mSHOW FIELDS FROM entries[0m
+Rendering  within layouts/entries
+Rendering entries/new
+Rendered entries/_form (0.00200)
+Completed in 0.00698 (143 reqs/sec) | Rendering: 0.00386 (55%) | DB: 0.00165 (23%) | 200 OK [http://0.0.0.0/entries/new]
+
+
+Processing EntriesController#list (for 127.0.0.1 at 2006-12-20 22:08:18) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"list", "controller"=>"entries"}
+
+
+Mysql::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/connection_adapters/mysql_adapter.rb:330:in `real_connect'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/connection_adapters/mysql_adapter.rb:330:in `connect'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/connection_adapters/mysql_adapter.rb:87:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/connection_adapters/mysql_adapter.rb:36:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/connection_adapters/mysql_adapter.rb:36:in `mysql_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:251:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:251:in `connection_without_query_cache='
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/query_cache.rb:54:in `connection='
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:220:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/base.rb:696:in `columns'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/calculations.rb:216:in `column_for'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/calculations.rb:138:in `calculate'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.4/lib/active_record/calculations.rb:66:in `count'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/pagination.rb:172:in `count_collection_for_pagination'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/pagination.rb:196:in `paginator_and_collection_for'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/pagination.rb:129:in `paginate'
+    .//app/controllers/entries_controller.rb:12:in `list'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:941:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:941:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing EntriesController#list (for 127.0.0.1 at 2006-12-20 22:08:31) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"list", "controller"=>"entries"}
+  [4;36;1mEntry Columns (0.094403)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.017878)[0m   [0mSELECT count(*) AS count_all FROM entries [0m
+  [4;36;1mEntry Load (0.000212)[0m   [0;1mSELECT * FROM entries LIMIT 0, 10[0m
+Rendering  within layouts/entries
+Rendering entries/list
+Completed in 0.18259 (5 reqs/sec) | Rendering: 0.01223 (6%) | DB: 0.11249 (61%) | 200 OK [http://127.0.0.1/entries/list]
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-20 22:55:53) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+
+
+ActionController::UnknownAction (No action responded to view_all):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-20 22:56:02) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;35;1mEntry Load (0.000390)[0m   [0mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+
+
+ActionController::MissingTemplate (Missing template script/../config/../app/views/entries/view_all.rhtml):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:1034:in `assert_existence_of_template_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:724:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:648:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/layout.rb:245:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:942:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    ./script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-20 22:59:00) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;36;1mEntry Load (0.000445)[0m   [0;1mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+Rendering entries/view_all
+Completed in 0.00302 (331 reqs/sec) | Rendering: 0.00113 (37%) | DB: 0.00044 (14%) | 200 OK [http://127.0.0.1/entries/view_all]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2006-12-20 22:59:04) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;35;1mEntry Columns (0.001651)[0m   [0mSHOW FIELDS FROM entries[0m
+  [4;36;1mSQL (0.000285)[0m   [0;1mSELECT count(*) AS count_all FROM entries [0m
+  [4;35;1mEntry Load (0.000139)[0m   [0mSELECT * FROM entries LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/entries
+Rendering entries/list
+Completed in 0.00499 (200 reqs/sec) | Rendering: 0.00081 (16%) | DB: 0.00207 (41%) | 200 OK [http://127.0.0.1/entries/]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2006-12-20 22:59:19) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;36;1mEntry Columns (0.001513)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.000289)[0m   [0mSELECT count(*) AS count_all FROM entries [0m
+  [4;36;1mEntry Load (0.000140)[0m   [0;1mSELECT * FROM entries LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/entries
+Rendering entries/list
+Completed in 0.00472 (211 reqs/sec) | Rendering: 0.00081 (17%) | DB: 0.00194 (41%) | 200 OK [http://127.0.0.1/entries/]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2006-12-20 22:59:25) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;35;1mEntry Columns (0.001500)[0m   [0mSHOW FIELDS FROM entries[0m
+  [4;36;1mSQL (0.000304)[0m   [0;1mSELECT count(*) AS count_all FROM entries [0m
+  [4;35;1mEntry Load (0.000135)[0m   [0mSELECT * FROM entries LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/entries
+Rendering entries/list
+Completed in 0.00463 (215 reqs/sec) | Rendering: 0.00078 (16%) | DB: 0.00194 (41%) | 200 OK [http://127.0.0.1/entries/]
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-20 22:59:29) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;36;1mEntry Load (0.000316)[0m   [0;1mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+Rendering entries/view_all
+Completed in 0.00280 (357 reqs/sec) | Rendering: 0.00116 (41%) | DB: 0.00032 (11%) | 200 OK [http://127.0.0.1/entries/view_all]
+
+
+Processing EntriesController#new (for 127.0.0.1 at 2006-12-20 22:59:30) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"new", "controller"=>"entries"}
+  [4;35;1mEntry Columns (0.001488)[0m   [0mSHOW FIELDS FROM entries[0m
+Rendering  within layouts/entries
+Rendering entries/new
+Rendered entries/_form (0.00904)
+Completed in 0.04850 (20 reqs/sec) | Rendering: 0.04556 (93%) | DB: 0.00149 (3%) | 200 OK [http://127.0.0.1/entries/new]
+
+
+Processing EntriesController#create (for 127.0.0.1 at 2006-12-20 22:59:41) [POST]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"commit"=>"Create", "action"=>"create", "controller"=>"entries", "entry"=>{"created_at(1i)"=>"2007", "created_at(2i)"=>"3", "title"=>"This is a test", "created_at(3i)"=>"20", "created_at(4i)"=>"22", "created_at(5i)"=>"59", "content"=>"My test entry goes here.."}}
+  [4;36;1mEntry Columns (0.001255)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.017155)[0m   [0;1mINSERT INTO entries (`title`, `content`, `created_at`) VALUES('This is a test', 'My test entry goes here..', '2007-03-20 22:59:00')[0m
+  [4;35;1mSQL (0.000408)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/entries/list
+Completed in 0.02219 (45 reqs/sec) | DB: 0.01891 (85%) | 302 Found [http://127.0.0.1/entries/create]
+
+
+Processing EntriesController#list (for 127.0.0.1 at 2006-12-20 22:59:41) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"list", "controller"=>"entries"}
+  [4;36;1mEntry Columns (0.001532)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.000323)[0m   [0mSELECT count(*) AS count_all FROM entries [0m
+  [4;36;1mEntry Load (0.000159)[0m   [0;1mSELECT * FROM entries LIMIT 0, 10[0m
+Rendering  within layouts/entries
+Rendering entries/list
+Completed in 0.00561 (178 reqs/sec) | Rendering: 0.00167 (29%) | DB: 0.00201 (35%) | 200 OK [http://127.0.0.1/entries/list]
+
+
+Processing EntriesController#new (for 127.0.0.1 at 2006-12-20 22:59:44) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"new", "controller"=>"entries"}
+  [4;35;1mEntry Columns (0.001514)[0m   [0mSHOW FIELDS FROM entries[0m
+Rendering  within layouts/entries
+Rendering entries/new
+Rendered entries/_form (0.00132)
+Completed in 0.00536 (186 reqs/sec) | Rendering: 0.00239 (44%) | DB: 0.00151 (28%) | 200 OK [http://127.0.0.1/entries/new]
+
+
+Processing EntriesController#create (for 127.0.0.1 at 2006-12-20 22:59:54) [POST]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"commit"=>"Create", "action"=>"create", "controller"=>"entries", "entry"=>{"created_at(1i)"=>"2007", "created_at(2i)"=>"3", "title"=>"Another test entry", "created_at(3i)"=>"20", "created_at(4i)"=>"22", "created_at(5i)"=>"59", "content"=>"This is a second entry"}}
+  [4;36;1mEntry Columns (0.001571)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.000074)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mINSERT INTO entries (`title`, `content`, `created_at`) VALUES('Another test entry', 'This is a second entry', '2007-03-20 22:59:00')[0m
+  [4;35;1mSQL (0.000397)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/entries/list
+Completed in 0.00565 (177 reqs/sec) | DB: 0.00224 (39%) | 302 Found [http://127.0.0.1/entries/create]
+
+
+Processing EntriesController#list (for 127.0.0.1 at 2006-12-20 22:59:54) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"list", "controller"=>"entries"}
+  [4;36;1mEntry Columns (0.001525)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.000289)[0m   [0mSELECT count(*) AS count_all FROM entries [0m
+  [4;36;1mEntry Load (0.000154)[0m   [0;1mSELECT * FROM entries LIMIT 0, 10[0m
+Rendering  within layouts/entries
+Rendering entries/list
+Completed in 0.00621 (161 reqs/sec) | Rendering: 0.00221 (35%) | DB: 0.00197 (31%) | 200 OK [http://127.0.0.1/entries/list]
+
+
+Processing EntriesController#new (for 127.0.0.1 at 2006-12-20 22:59:55) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"new", "controller"=>"entries"}
+  [4;35;1mEntry Columns (0.001496)[0m   [0mSHOW FIELDS FROM entries[0m
+Rendering  within layouts/entries
+Rendering entries/new
+Rendered entries/_form (0.00127)
+Completed in 0.00532 (188 reqs/sec) | Rendering: 0.00234 (44%) | DB: 0.00150 (28%) | 200 OK [http://127.0.0.1/entries/new]
+
+
+Processing EntriesController#create (for 127.0.0.1 at 2006-12-20 23:00:06) [POST]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"commit"=>"Create", "action"=>"create", "controller"=>"entries", "entry"=>{"created_at(1i)"=>"2007", "created_at(2i)"=>"3", "title"=>"Third entry", "created_at(3i)"=>"22", "created_at(4i)"=>"22", "created_at(5i)"=>"59", "content"=>"My final entry for now."}}
+  [4;36;1mEntry Columns (0.001516)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.000073)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mINSERT INTO entries (`title`, `content`, `created_at`) VALUES('Third entry', 'My final entry for now.', '2007-03-22 22:59:00')[0m
+  [4;35;1mSQL (0.000381)[0m   [0mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/entries/list
+Completed in 0.00524 (190 reqs/sec) | DB: 0.00216 (41%) | 302 Found [http://127.0.0.1/entries/create]
+
+
+Processing EntriesController#list (for 127.0.0.1 at 2006-12-20 23:00:06) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"list", "controller"=>"entries"}
+  [4;36;1mEntry Columns (0.001905)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.023669)[0m   [0mSELECT count(*) AS count_all FROM entries [0m
+  [4;36;1mEntry Load (0.000161)[0m   [0;1mSELECT * FROM entries LIMIT 0, 10[0m
+Rendering  within layouts/entries
+Rendering entries/list
+Completed in 0.03044 (32 reqs/sec) | Rendering: 0.00272 (8%) | DB: 0.02574 (84%) | 200 OK [http://127.0.0.1/entries/list]
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-20 23:00:09) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;35;1mEntry Load (0.000360)[0m   [0mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+Rendering entries/view_all
+  [4;36;1mEntry Columns (0.001446)[0m   [0;1mSHOW FIELDS FROM entries[0m
+Completed in 0.00474 (211 reqs/sec) | Rendering: 0.00161 (34%) | DB: 0.00181 (38%) | 200 OK [http://127.0.0.1/entries/view_all]
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-20 23:09:38) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;35;1mEntry Load (0.000394)[0m   [0mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+Rendering entries/view_all
+  [4;36;1mEntry Columns (0.001497)[0m   [0;1mSHOW FIELDS FROM entries[0m
+Completed in 0.00626 (159 reqs/sec) | Rendering: 0.00293 (46%) | DB: 0.00189 (30%) | 200 OK [http://127.0.0.1/entries/view_all]
+
+
+Processing EntriesController#show (for 127.0.0.1 at 2006-12-20 23:09:39) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"entries"}
+  [4;35;1mEntry Load (0.035227)[0m   [0mSELECT * FROM entries WHERE (entries.id = '3') LIMIT 1[0m
+Rendering  within layouts/entries
+Rendering entries/show
+  [4;36;1mEntry Columns (0.001506)[0m   [0;1mSHOW FIELDS FROM entries[0m
+Completed in 0.05418 (18 reqs/sec) | Rendering: 0.01593 (29%) | DB: 0.03673 (67%) | 200 OK [http://127.0.0.1/entries/show/3]
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-20 23:26:19) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;35;1mEntry Load (0.000421)[0m   [0mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+Rendering entries/view_all
+  [4;36;1mEntry Columns (0.001435)[0m   [0;1mSHOW FIELDS FROM entries[0m
+Completed in 0.00514 (194 reqs/sec) | Rendering: 0.00192 (37%) | DB: 0.00186 (36%) | 200 OK [http://127.0.0.1/entries/view_all]
+
+
+Processing EntriesController#show (for 127.0.0.1 at 2006-12-20 23:34:13) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"entries"}
+  [4;35;1mEntry Load (0.000309)[0m   [0mSELECT * FROM entries WHERE (entries.id = '2') LIMIT 1[0m
+Completed in 0.00180 (556 reqs/sec) | Rendering: 0.00004 (1%) | DB: 0.00031 (17%) | 200 OK [http://127.0.0.1/entries/show/2]
+
+
+Processing EntriesController#show (for 127.0.0.1 at 2006-12-20 23:34:18) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"entries"}
+  [4;36;1mEntry Load (0.000305)[0m   [0;1mSELECT * FROM entries WHERE (entries.id = '2') LIMIT 1[0m
+Rendering  within layouts/entries
+Rendering entries/show
+  [4;35;1mEntry Columns (0.001444)[0m   [0mSHOW FIELDS FROM entries[0m
+Completed in 0.00488 (205 reqs/sec) | Rendering: 0.00163 (33%) | DB: 0.00175 (35%) | 200 OK [http://127.0.0.1/entries/show/2]
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-21 00:13:07) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;36;1mEntry Load (0.000379)[0m   [0;1mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+Rendering entries/view_all
+  [4;35;1mEntry Columns (0.001576)[0m   [0mSHOW FIELDS FROM entries[0m
+Completed in 0.00597 (167 reqs/sec) | Rendering: 0.00265 (44%) | DB: 0.00196 (32%) | 200 OK [http://127.0.0.1/entries/view_all]
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-21 00:13:08) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;36;1mEntry Load (0.000370)[0m   [0;1mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+Rendering entries/view_all
+  [4;35;1mEntry Columns (0.001448)[0m   [0mSHOW FIELDS FROM entries[0m
+Completed in 0.00549 (182 reqs/sec) | Rendering: 0.00230 (41%) | DB: 0.00182 (33%) | 200 OK [http://127.0.0.1/entries/view_all]
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-21 00:13:08) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;36;1mEntry Load (0.000378)[0m   [0;1mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+Rendering entries/view_all
+  [4;35;1mEntry Columns (0.001459)[0m   [0mSHOW FIELDS FROM entries[0m
+Completed in 0.00523 (191 reqs/sec) | Rendering: 0.00204 (38%) | DB: 0.00184 (35%) | 200 OK [http://127.0.0.1/entries/view_all]
+
+
+Processing EntriesController#view_all (for 127.0.0.1 at 2006-12-21 00:13:09) [GET]
+  Session ID: 304ed0139b2f8560137329062fe26ad4
+  Parameters: {"action"=>"view_all", "controller"=>"entries"}
+  [4;36;1mEntry Load (0.000360)[0m   [0;1mSELECT * FROM entries ORDER BY created_at DESC [0m
+Rendering  within layouts/entries
+Rendering entries/view_all
+  [4;35;1mEntry Columns (0.001513)[0m   [0mSHOW FIELDS FROM entries[0m
+Completed in 0.00519 (192 reqs/sec) | Rendering: 0.00196 (37%) | DB: 0.00187 (36%) | 200 OK [http://127.0.0.1/entries/view_all]
+
+
+Processing EntriesController#index (for 127.0.0.1 at 2007-01-10 11:56:59) [GET]
+  Session ID: 52c1ec688f0c5047ee6057b8b5c580d1
+  Parameters: {"action"=>"index", "controller"=>"entries"}
+  [4;36;1mEntry Columns (0.060199)[0m   [0;1mSHOW FIELDS FROM entries[0m
+  [4;35;1mSQL (0.024601)[0m   [0mSELECT count(*) AS count_all FROM entries [0m
+  [4;36;1mEntry Load (0.000388)[0m   [0;1mSELECT * FROM entries LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/entries
+Rendering entries/list
+Completed in 0.21837 (4 reqs/sec) | Rendering: 0.00586 (2%) | DB: 0.08519 (39%) | 200 OK [http://127.0.0.1/entries/]

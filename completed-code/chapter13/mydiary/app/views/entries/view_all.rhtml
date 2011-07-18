@@ -1,0 +1,9 @@
+<%= session[:requests] %>
+
+<% @entries.each do |entry| %>
+  <h1><%= link_to entry.title, :action => 'show', :id => entry.id %></h1>
+  <p><%= entry.content %></p>
+  <p><em>Posted at <%= entry.created_at %></em></p>	
+<% end %>
+
+<%= link_to 'Add New entry', :controller => 'entries', :action => 'new' %>
