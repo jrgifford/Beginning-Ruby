@@ -12,4 +12,3 @@ end
 
 puts NumberStuff.random
 puts LetterStuff.random
-
