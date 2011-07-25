@@ -6,4 +6,3 @@ end
 
 include AnotherModule
 do_stuff
-
