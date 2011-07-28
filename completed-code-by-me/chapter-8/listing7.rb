@@ -5,6 +5,6 @@ end
 
 catch(:finish) do
   1000.times { generate_random_number_except_123 }
-  puts "Generated 1000 random numbers without getting 123!"
+  puts "Generated 1000 random numbers without generating 123!"
 end
 

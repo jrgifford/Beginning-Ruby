@@ -1,3 +1,4 @@
+
 require 'benchmark'
 iterations = 1000000
 
