@@ -1,0 +1,5 @@
+1312231709
+MyFile	/home/jrg/code/Beginning-Ruby/completed-code-by-me/chapter-9/listing1.rb	class MyFile
+finished	/home/jrg/code/Beginning-Ruby/completed-code-by-me/chapter-9/listing1.rb	  def finished
+handle	/home/jrg/code/Beginning-Ruby/completed-code-by-me/chapter-9/listing1.rb	  attr_reader :handle
+initialize	/home/jrg/code/Beginning-Ruby/completed-code-by-me/chapter-9/listing1.rb	  def initialize(filename)
