@@ -1,0 +1,82 @@
+--- 
+:presubs: 
+- - dont
+  - do not
+- - don't
+  - do not
+- - youre
+  - you're
+- - love
+  - like
+- - apologize
+  - are sorry
+- - dislike
+  - hate
+- - despise
+  - hate
+- - yeah
+  - "yes"
+- - mom
+  - family
+:responses: 
+  you are *: 
+  - What makes you think I am *?
+  - Are you so sure I am *?
+  sorry: 
+  - There's no need to apologize.
+  hates *: 
+  - Why do you think they hate *?
+  "no": 
+  - Really?
+  - Fair enough.
+  :greeting: 
+  - Hi. I'm [name]. Want to chat?
+  - What's on your mind today?
+  - Hi. What would you like to talk about?
+  :default: 
+  - I don't understand.
+  - What?
+  - Huh?
+  - Tell me about something else.
+  - I'm tired of this. Change the subject.
+  i am *: 
+  - Is it normal for you to be *?
+  - Do you like being *?
+  do not know: 
+  - Are you always so indecisive?
+  why can't you *: 
+  - Do you want me to *?
+  different: 
+  - How is it different?
+  - What has changed?
+  :farewell: 
+  - Good bye!
+  - Au revoir!
+  i like *: 
+  - Why do you like *?
+  - Wow! I like * too!
+  why can't i *: 
+  - Do you want to *?
+  "yes": 
+  - At least you're positive about something!
+  - Great.
+  hello: 
+  - How's it going?
+  - How do you do?
+  - Enough of the pleasantries!
+  what: 
+  - Why do you ask?
+  - Why?
+  - I don't know. Do you?
+  family: 
+  - Tell me about your family
+  hate *: 
+  - Why don't you like *?
+  - Why the dislike of *?
+  why does *: 
+  - I don't know why *
+  - Do you already know the answer?
+  i do not *: 
+  - Why don't you *?
+  everyone *: 
+  - You think everyone *?
