@@ -11,4 +11,9 @@ class Bot
     rescue "Can't load bot data"
     end
   end
-end
+
+  # Returns a random greeting as specified in the bot's data File
+  def greeting
+    random_response(:greeting)
+  end
+
