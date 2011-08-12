@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'wordplay'
+require './wordplay'
 
 # Unit testing class for the WordPlay library
 class TestWordPlay < Test::Unit::TestCase
